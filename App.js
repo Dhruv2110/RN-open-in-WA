@@ -37,13 +37,12 @@ const App = () => {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.container}
     >
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>
-            Open In WhatsApp
-          </Text>
-      </View>
+      <View style={styles.headingContainer}>
+          <Text style={styles.headingText}>Open Whatsapp Without</Text>
+        <Text style={styles.headingText}>Saving Phone Number</Text>
 
-        <Text style={{color:'white',fontSize:25,fontWeight:'bold',fontStyle:'italic',marginBottom:10}}>Enter Phone Number : </Text>
+      </View>
+        <Text style={{color:'white',fontSize:22,fontWeight:'bold',fontStyle:'italic',marginBottom:10}}>Enter Phone Number : </Text>
         <PhoneInput
           ref={phoneInput}
           defaultValue={value}
@@ -79,25 +78,26 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center',
     justifyContent:'flex-start',
-    paddingVertical:50
+    paddingVertical:40
   },
-  titleContainer:{
-    alignItems: 'center', 
-    width: '90%', 
-    // borderRadius: 10, 
-    // elevation: 30, 
-    backgroundColor: '#1ad1ff', 
-    marginBottom: 50
-  },
-  title:{
-    fontSize:40,
-    fontWeight:'bold',
-    color:'yellow',
-    alignContent:'center',
-    marginBottom:10,
+  headingContainer:{
+    alignItems: 'center',
+    width: '90%',
+    borderRadius: 15, 
+    elevation: 30, 
+    // backgroundColor: '#1ad1ff',
+    backgroundColor: '#0099cc',
+    marginBottom: 50,
+    paddingVertical:20,
     // textShadowColor: 'rgba(0, 0, 0, 0.75)',
     // textShadowOffset: { width: -1, height: 1 },
     // textShadowRadius: 10
+  },
+  headingText:{
+    // color: '#367787', 
+    color: 'yellow', 
+    fontSize: 27, 
+    fontWeight: 'bold', 
   },
   wa: {
     justifyContent: 'center',
